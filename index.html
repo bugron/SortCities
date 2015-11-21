@@ -1,0 +1,2249 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Simple Table Sorting with jQuery - Treehouse Demo</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://d15dxvojnvxp1x.cloudfront.net/assets/favicon.ico">
+  <link rel="icon" href="http://d15dxvojnvxp1x.cloudfront.net/assets/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+</head>
+
+<body>
+ <div id="wrapper">
+  <h1>Sortable Table of Search Queries</h1>
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th><span>City</span></th>
+        <th><span>County</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/FreeCodeCampAarhus">Aarhus</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.abu.dhabi/">Abu Dhabi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/abuja.free.code.camp/">Abuja</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.accra/">Accra</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.addis.abeba/">Addis Abeda</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.adelaide/">Adelaide</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.ahmedabad/">Ahmedabad</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.aichi/">Aichi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.berkeley/">Alameda</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.albany.ny/">Albany</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.albuquerque/">Albuquerque</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.alex/">Alexandria</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Algiers/">Algiers</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/1622011571406263/">Aligarh</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.allahabad/">Allahabad</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.almeria/">Almeria</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.americana/">Americana</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.ames.iowa/">Ames</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.amman/">Amman</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.amsterdam/">Amsterdam</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.anacortes/">Anacortes</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.ankara/">Ankara</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.ann.arbor/">Ann Arbor</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.appleton/">Appleton</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.your.apucarana.parana/">Apucarana</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.aracaju/">Aracaju</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.asheville/">Asheville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.astana/">Astana</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.asuncion/">Asuncion</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.athens.ohio/">Athens, Ohio</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.athens.greece/">Athens</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.atlanta/">Atlanta</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.auburn.maine/">Auburn, ME</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/awesome.code.camp/">Auckland</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.augusta/">Augusta</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.austin/">Austin</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.bacau.romania/">Bacau</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bakersfield.california/">Bakersfield</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.baku/">Baku</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bali/">Bali</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.baltimore/">Baltimore</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bandung/">Bandung</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bangkok/">Bangkok</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.banja.luka/">Banja Luka</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.barcelona/">Barcelona</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.barranquilla.co/">Barranquilla</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Barrie.Ontario/">Barrie</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Barrie.Ontario/">Barrie</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.batticaloa/">Batticaloa</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.beijing/">Beijing</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.beirut/">Beirut</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.belem/">Belem</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.belgrade/">Belgrade</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.belize.city/">Belize City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.belize/">Belize</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bellevue/">Bellevue</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bellingham/">Bellingham</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.belo.horizonte/">Belo Horizonte</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bengaluru/">Bengaluru</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.berkeley/">Berkeley</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.berlin/">Berlin</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bhaktapur/">Bhaktapur</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bhubaneswar/">Bhubaneswar</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bialystok/">Bialystok</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bigrapids/">Big Rapids</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bijeljina/">Bijeljina</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.oxford.al/">Birmingham, Alabama</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.birmingham.uk/">Birmingham</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bishkek/">Bishkek</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bismarck.north.dakota/">Bismarck, ND</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bloomington.normal/">Bloomington, IL</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bloomington.in/">Bloomington, IN</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bogota/">Bogota</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.boise">Boise</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.boston/">Boston</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.boulder/">Boulder</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.braga/">Braga</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.brasilia/">Brasilia</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.brasov">Brasov</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bratislava/">Bratislava</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.brighton/">Brighton</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.brisbane/">Brisbane</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.brno/">Brno</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.brooksville.florida/">Brooksville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.brussels/">Brussels</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bryan.college.station/">Bryan College Station</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bucaramanga/">Bucaramanga</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bucharest/">Bucharest</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.budapest/">Budapest</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.buenos.aires/">Buenos Aires</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.buffalo/">Buffalo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Bury.St.Edmunds/">Bury St Edmunds</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.busan/">Busan</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/Free.Code.Camp.Bushkill.PA/">Bushkill</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.butte.montana/">Butte, MN</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.buzau/">Buzau</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bydgoszcz/">Bydgoszcz</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.cagayandeoro.city/">Cagayandeoro City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cairo/">Cairo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.calabar/">Calabar</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.calgary/">Calgary</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cali/">Cali</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.Cambridge.ON.Canada/">Cambridge, ON</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.campinas/">Campinas</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.canberra/">Canberra</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cape.cod/">Cape Cod</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cape.town/">Cape Town</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.caracas/">Caracas</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cardiff/">Cardiff</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.casablanca/">Casablanca</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.catania/">Catania</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.cebu/">Cebu</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cedar.rapids/">Cedar Rapids</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.central.mississippi/">Central Mississippi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.olympia/">Centralia, WA</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.champaign.urbana/">Champaign-Urbana</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.charleston.wv">Charleston, WV</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.charlotte.nc/">Charlotte</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.chattanooga/">Chattanooga</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.chennai/">Chennai</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.chernivtsi.chernivetska.oblast.u/">Chernivtsi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.chiang.mai/">Chiang Mai</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.chicago/">Chicago</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.Chisinau/">Chisinau</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.christchurch/">Christchurch</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cincinnati/">Cincinnati</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.clarksville.TN/">Clarksville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cleveland/">Cleveland</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cluj">Cluj</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cottagegrove/">Coattage Grove</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.coatzacoalcos/">Coatzacoalcos</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.coimbatore">Coimbatore</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.colombo/">Colombo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/freecodecampcoloradosprings/">Colorado Springs</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.columbus/">Columbus</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.cotonou/">Cotonou</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.coventry/">Coventry</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cuenca/">Cuenca</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.culiacan/">Culiacan</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.curitiba/">Curitiba</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.your.Da.Nang/">Da Nang</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.dallas/">Dallas</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.dayton.ohio/">Dayton</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.delhi/">Delhi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.denver/">Denver</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.derby/">Derby</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.des.moines/">Des Moines</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.detroit/">Detroit</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.dhaka/">Dhaka</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.dharwad/">Dharwad</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.dnipropetrovsk">Dnipropetrovsk</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.doha/">Doha</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.dubai/">Dubai</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.dublin/">Dublin</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.duluth/">Duluth</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.durango/">Durango</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.durban.kwazulunatal/">Durban</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.edinburgh/">Edinburgh</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.edmonton/">Edmonton</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.el.paso">El Paso</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.eugene/">Eugene</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.evansville.in/">Evansville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.farmville.va/">Farmville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.fayetteville.arkansas/">Fayetteville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.ferizaj/">Ferizaj</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.firenze/">Firenze</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.northern.arizona/">Flagstaff</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.florianopolis/">Florianopolis</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.floyd.virginia/">Floyd, VA</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.folsom">Folsom</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.fort.collins/">Fort Collins</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/freecodecampfortworth/">Fort Worth</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.group.fortaleza/">Fortaleza</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.frankfort.kentucky/">Frankfort</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.frankfurt.main/">Frankfurt</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.frederick.md">Frederick, MD</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.fredericksburg/">Fredericksburg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.freehold/">Freehold</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.fremont/">Fremont</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.fresno/">Fresno</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.fuengirola/">Fuengirola</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.gainesville.fla/">Gainesville, FL</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.galveston/">Galveston</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.trojmiasto/">Gdańsk</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.trojmiasto">Gdynia</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.geneva/">Geneva</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.glasgowcity/">Glasgow</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Glendora.California/">Glendora</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.goiania/">Goiania</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.Gold.Coast/">Gold Coast</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.granada/">Granada</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.grand.rapids/">Grand Rapids</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Greenville/">Greenville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.guacara/">Guacara</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/fcc.guadalajara">Guadalajara</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.guarapuava/">Guarapuava</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.guatemala/">Guatemala City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.gujrat/">Gujrat City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.guntur/">Guntur</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.gurgaon/">Gurgaon</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.goettingen/">Göttingen</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hagerstown/">Hagerstown</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Haifa/">Haifa</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.halifax/">Halifax</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hamburg/">Hamburg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hamptonroads/">Hampton Roads</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hanoi/">Hanoi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.harare/">Harare</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.harrisburg.pa/">Harrisburg, PA</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hartford.connecticut/">Hartford</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.hazelton.britishcolumbia/">Hazelton, BC</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Hermosillo/">Hermosillo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hickory.nc">Hickory</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hochiminhcity/">Ho Chi Minh City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hobart/">Hobart</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hk/">Hong Kong</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.houston/">Houston</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hove">Hove</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.huntsville/">Huntsville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.hyderabad/">Hyderabad</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.iasi.romania/">Iasi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.idaho.falls.idaho/">idaho Falls</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.indianapolis.in/">Indianapolis</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.Indore/">Indore</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.ipswich.qld/">Ipswich</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.irkutsk/">Irkutsk</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.isfahan/">Isfahan</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.islamabad/">Islamabad</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.istanbul/">Istanbul</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.ithaca/">Ithaca</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.ivano.frankivsk/">Ivano Frankivsk</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.izmir">Izmir</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sao.paulo.jacarei/">Jacarei</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.jackson.ms">Jackson, MS</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.jacksonville/">Jacksonville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.jaffna/">Jaffna</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.jaipur/">Jaipur</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.jakarta/">Jakarta</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.jalgaon/">Jalgaon</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.jamnagar.guj.in/">Jamnagar</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.jamnagar.guj.in/">Jamnagar</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.jerusalem/">Jerusalem</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.joao.pessoa/">Joao Pessoa</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.johannesburg/">Johannesburg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="//facebook.com/groups/free.code.camp.nusajaya.malaysia/">Johor</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.joinville/">Joinville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.juarezchi/">Juarezchi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kaduna/">Kaduna</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kalamazoo/">Kalamazoo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kampala/">Kampala</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kansascity/">Kansas City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.karachi/">Karachi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kathmandu/">Kathmandu</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kemerovo/">Kemerovo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kerch/">Kerch</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.kharkiv/">Kharkiv</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kiev/">Kiev</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.kigali/">Kigali</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.killeen.texas/">Killeen</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kingston.jamaica/">Kingston, Jamaica</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kingston.ontario/">Kingston, ON</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Kisumu/">Kisumu</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.knoxville.tn/">Knoxville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.koblenz/">Koblenz</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.koeln/">Koeln</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kolkata/">Kolkata</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kosice/">Kosice</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kosovo/">Kosovo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kozhikode/">Kozhikode</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.krasnodar/">Krasnodar</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.kryvyi.rih/">Kryvyi Rih</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.malaysia.kl/">Kuala Lumpur</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.kulsary/">Kulsary</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.la.crosse">La Crosse</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.La.Paz/">La Paz</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.papua.new.guinea.lae/">Lae</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lagos/">Lagos</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lahore/">Lahore</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/Free.Code.Camp.Lakeland.Florida/">Lakeland</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lc.nm/">Las Cruces</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.las.vegas.nv/">Las Vegas</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lawrence">Lawrence</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.lecce/">Lecce</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.leeds/">Leeds</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.leesburg/">Leesburg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.leesville.la/">Leesville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lehi/">Lehi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lexington/">Lexington</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/Free.Code.Camp.Lima/">Lima</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.limassol/">Limassol</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lincoln/">Lincoln, NE</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lindsay/">Lindsay</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lisbon/">Lisbon</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.little.rock/">Little Rock</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.ljubljana/">Ljubljana</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lodz/">Lodz</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.london.on/">London, ON</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.london/">London</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.los.alamos.nm/">Los Alamos</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.los.angeles/">Los Angeles</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Louisville">Louisville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.luanda/">Luanda</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lubbock/">Lubbock</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.lviv/">Lviv</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.LYH/">Lynchburg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.macon/">Macon</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.madison.wisconsin/">Madison</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.madrid/">Madrid</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.makati/">Makati</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/freecodemv/">Male</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.managua/">Managua</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.manchester/">Manchester, UK</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.mangalore/">Mangalore</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.manila/">Manila</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.mansoura/">Mansoura</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Melbourne/">Melbourne</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.mexico.df/">Mexico City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.miami/">Miami</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.mianwali/">Mianwali</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.milan/">Milan</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.milwaukee/">Milwaukee</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.minneapolis/">Minneapolis</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Minsk/">Minsk</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.msgulfcoast/">Mississippi Gulf Coast</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.missoula/">Missoula</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.modesto/">Modesto</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.monterrey/">Monterrey</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.montevideo/">Montevideo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.montgomery.alabama/">Montgomery</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.montreal/">Montreal</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.moosejaw">Moosejaw</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.morgan.ciry.la/">Morgan City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.morgantown/">Morgantown</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.moscow/">Moscow</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.moss.point.mississippi/">Moss Point</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.multan">Multan</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/frre.code.camp.mumbai/">Mumbai</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.munich/">Munich</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.cork.munster/">Munster</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.muskegon/">Muskegon</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.mykolaiv/">Mykolaiv</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.mysore/">Mysore</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.nairobi/">Nairobi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.nantes/">Nantes</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.napa/">Napa</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.napoli">Napoli</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.your.nashik/">Nashik</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.nashville/">Nashville</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.natal">Natal</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/Free.Code.Camp.Nazareth.Israel/">Nazareth</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.new.brunswick.new.jersey/">New Brunswick</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.new.haven/">New Haven</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.neworleans/">New Orleans</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.new.paltz/">New Paltz</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.new.westminster/">New Westminster</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.new.york.city/">New York City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.nicosia/">Nicosia</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.nis/">Nis</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.noida/">Noida</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.norfolk">Norfolk</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.bloomington.normal/">Normal</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.north.mississippi/">North Mississippi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.north.platte/">North Platte</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="//facebook.com/groups/free.code.camp.nusajaya.malaysia//">Nusajaya</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.berkeley/">Oakland</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.oklahoma.city/">Oklahoma City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.olympia/">Olympia</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.omaha/">Omaha</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.omsk/">Omsk</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.oradea/">Oradea</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.oradell/">Oradell</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.orange.county/">Orange County</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.orenburg/">Orenburg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.orlando/">Orlando</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.ottawa/">Ottawa</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.owatonna/">Owatonna</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.palisadespark/">Palisades Park</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.panama.city">Panama City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.your.apucarana.parana/">Parana</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.paris/">Paris</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.pasadena.ca/">Pasadena</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.pasto/">Pasto</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/Free.Code.Camp.Pavlovo/">Pavlovo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.penang/">Penang</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.pensacola/">Pensacola</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.perlis.malaysia">Perlis</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.perth/">Perth</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.perugia.it/">Perugia</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.philadelphia/">Philadelphia</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.phnompenh.cambodia/">Phnom Penh</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tempe.phoenix.scottsdale/">Phoenix</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.pittsburgh.pa/">Pittsburgh</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.poitiers/">Poitiers</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.pondicherry/">Pondicherry</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.port.harcourt/">Port Harcourt</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.portland/">Portland</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.porto.alegre.rs/">Porto Alegre</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.porto/">Porto</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.prague/">Prague</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.northern.arizona/">Prescott</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.pristina/">Pristina</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.providence/">Providence</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.provo/">Provo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.pueblaMX/">Puebla</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.pueblo/">Pueblo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.pune/">Pune</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.quadcities/">Quad Cities, IL</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.quibdo/">Quibdo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.raleigh/">Raleigh</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.ranchi/">Ranchi</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.reading/">Reading</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.recife">Recife</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.remond.oregon/">Redmond, OR</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.reno/">Reno</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.reykjavik/">Reykjavik</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.rice.lake.wi/">Rice Lake</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.richmond/">Richmond</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.riga/">Riga</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.rio.de.janeiro/">Rio de Janeiro</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.riverside.ca/">Riverside, CA</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Riyadh/">Riyadh</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Rochester.New.York/">Rochester, NY</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.roma/">Roma</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.rotterdam/">Rotterdam</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sacramento/">Sacramento</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/1505677729748974/">Sahiwal</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.saint.george/">Saint George</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.saint.louis/">Saint Louis</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.saint.paul.mn/">Saint Paul</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.saint.petersburg/">Saint Petersburg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.salamanca/">Salamanca</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.salisbury.maryland/">Salisbury, MD</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.salt.lake.city/">Salt Lake City</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.salvador/">Salvador</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.san.antonio">San Antonio</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.san.bernardino/">San Bernardino</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.san.diego/">San Diego</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.san.francisco">San Francisco</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.san.jose.costa.rica/">San Jose, Costa Rica</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.san.jose">San Jose</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sanjuan.pr/">San Juan</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.santa.barbara/">Santa Barbara</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.santa.clarita/">Santa Clarita</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.SC/">Santa Cruz</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.SLO/">Santa Luis Obispo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.santa.rosa/">Santa Rosa</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.santiago/">Santiago</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.dr/">Santo Domingo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sao.paulo/">Sao Paulo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sarajevo">Sarajevo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.sarasota.florida/">Sarasota</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sasebo/">Sasebo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.savannah/">Savannah</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tempe.phoenix.scottsdale/">Scottsdale</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.seattle/">Seattle</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.northern.arizona/">Sedona</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.seoul/">Seoul</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Shanghai/">Shanghai</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sheffield/">Sheffield</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.shenzhen/">Shenzhen</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sidoarjo/">Sidoarjo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sierra.vista/">Sierra Vista</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.silverspring/">Silverspring</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.singapore/">Singapore</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.skopje/">Skopje</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sofia/">Sofia</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.solo/">Solo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.trojmiasto/">Sopot</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.sorocaba.sp/">Sorocaba</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.south.bend/">South Bend</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.southlosangeles/">South Los Angeles</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.spartanburg/">Spartanburg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.spokane/">Spokane</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.springfield.missouri/">Springfield, MO</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.srinagar/">Srinagar</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.stcloud/">St Cloud</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.stockholm.sweden/">Stockholm</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.stoke.on.trent/">Stroke-on-Trent</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.struga/">Struga</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.stuttgart/">Stuttgart</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.subotica/">Subotica</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.surabaya/">Surabaya</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.surigao/">Surigao</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.surrey/">Surrey</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sydney.ns/">Sydney, Nova Scotia</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.sydney.au/">Sydney</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.szczecin/">Szczecin</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.taipei/">Taipei</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tallahassee.florida/">Tallahassee</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tallinn/">Tallinn</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tampa/">Tampa Bay</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.targu.mures/">Targu Mures</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tashkent/">Tashkent</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Honduras/">Tegucigalpa</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tehran/">Tehran</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.Tel.Aviv/">Tel Aviv</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.temecula/">Temecula</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tempe.phoenix.scottsdale/">Tempe</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.thessaloniki/">Thessaloniki</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.ticino/">Ticino</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tijuana/">Tijuana</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.timisoara/">Timisoara</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tirana/">Tirana</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.tiraspol/">Tiraspol</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tokyo/">Tokyo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.toms.river/">Tom's River</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.torino/">Torino</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.to/">Toronto</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tricitieswa/">Tri-Cities Washington</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/freecodecamp.trivandrum/">Trivandrum</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.trondheim/">Trondheim</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tucson/">Tucson</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tulsa/">Tulsa</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.tunisia/">Tunis</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/148780962143254/">Tupelo MS</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.your.ulaanbaatar/">Ulaanbaatar</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.university.center/">University Center</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.valdosta/">Valdosta</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.vlc/">Valencia</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.vancouver.bc.canada/">Vancouver</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.northern.arizona/">Verde Valley</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.victoria.bc/">Victoria</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.vilnius.lt/">Vilnius</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.virginia.beach/">Virginia Beach</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.vitoria.e.regiao.metropolitana.es/">Vitória</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.vladivostok/">Vladivostok</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.warrington/">Warrington</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.warsaw/">Warsaw</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.washington.dc/">Washington, DC</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.waterford/">Waterford</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.wichita/">Wichita</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.wilmington.nc/">Wilmington, NC</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.winnipeg/">Winnipeg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.wuerzburg/">Wuerzburg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.myanmar">Yangon</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.yaounde">Yaounde</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.yaroslavl/">Yaroslavl</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.yekaterinburg">Yekaterinburg</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.armenia/">Yerevan</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.zacatecas/">Zacatecas</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.zagreb/">Zagreb</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://www.facebook.com/groups/free.code.camp.zhytomyr/">Zhytomyr</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.znojmo/">Znojmo</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="lalign"><a href="https://.facebook.com/groups/free.code.camp.zurich/">Zurich</a></td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
+
+<button title="Click this button to get the markdown of the table above">Get Markdown</button>
+<textarea></textarea>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    //Make the table sortable
+    $(function(){
+      $('#keywords').tablesorter(); 
+    });
+    
+    $.each($("td.lalign"), function(i, td) {
+        $.ajax(
+        {
+            type: "GET", 
+            url: "http://api.geonames.org/searchJSON?username=demo&formatted=true&name_equals=" + $(td).text(), // Identify country name by the city using GeoNames API
+            async: false,
+            success: function(response) {
+                var length = response.geonames.length;
+                for (var i = 0; i < length; i++) {
+                    if(response.geonames[i].fclName === "city, village,...") { // Check if the current object is a city
+                        $(td).next().text(response.geonames[i].countryName); //Write the country name
+                        break;
+                    }
+                }
+            }
+        });
+    });
+
+    $("button").click(function() {
+        var next = $("td.lalign").next();
+        $.each(next, function(i, td) {
+            var prevInd = i - 1;
+            if($(td).text()) {
+                if($(td).text() !== $(next[prevInd]).text())
+                    $("textarea").text($("textarea").text()+"- "+$(td).text()+"\n"); // Country
+                $("textarea").text($("textarea").text()+"  - ["+$(td).prev().text()+"]("+$(td).prev().find("a").attr("href")+ ")"+"\n"); // City
+            }
+        });
+    });
+})
+</script>
+</body>
+</html>
