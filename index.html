@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 </head>
 
 <body>
@@ -2210,44 +2211,5 @@
     </tbody>
   </table>
 </div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    //Make the table sortable
-    $(function(){
-      $('#keywords').tablesorter(); 
-    });
-    
-    $.each($("td.lalign"), function(i, td) {
-        $.ajax(
-        {
-            type: "GET", 
-            url: "http://api.geonames.org/searchJSON?username=demo&formatted=true&name_equals=" + $(td).text(), // Identify country name using GeoNames API
-            async: false,
-            success: function(response) {
-                var length = response.geonames.length;
-                for (var i = 0; i < length; i++) {
-                    if(response.geonames[i].fclName === "city, village,...") { // Check if the current object is a city
-                        $(td).next().text(response.geonames[i].countryName); //Write the country name
-                        break;
-                    }
-                }
-            }
-        });
-    });
-
-    $("button").click(function() {
-        var next = $("td.lalign").next();
-        $.each(next, function(i, td) {
-            var prevInd = i - 1;
-            if($(td).text()) {
-                if($(td).text() !== $(next[prevInd]).text())
-                    $("textarea").text($("textarea").text()+"- "+$(td).text()+"\n"); // Country
-                $("textarea").text($("textarea").text()+"  - ["+$(td).prev().text()+"]("+$(td).prev().find("a").attr("href")+ ")"+"\n"); // City
-            }
-        });
-    });
-})
-</script>
 </body>
 </html>
